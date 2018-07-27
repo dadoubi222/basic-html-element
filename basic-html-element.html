@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" type="imgae/x-icon" href="source/mIcon.ico">
+	<style type="text/css">
+		div{
+			width: 100%;
+			border:1px solid black;
+		}
+		table{
+			width:300px;
+			height:200px;
+		}
+		th{
+			width: 40px;
+			text-align:center;
+		}
+		td{
+			width: 40px;
+			text-align:center;
+		}
+		textarea{
+			width: 300px;
+			height: 100px;
+		}
+		iframe{
+			width: 100%;
+			height: 400px;
+		}
+	</style>
+	<title>basic-html-element</title>
+</head>
+<body>
+	<h1> html基本的标签笔记(个人向) </h1>
+	<hr/>
+	<p>
+		块级元素以及内联元素:
+		块级元素在页面中以块的形式展现,不管是什么内容,会被挤到下一行
+		内联元素一般出现在块级元素中,内联元素不会导致内容换行,可多个内容出现在同一行
+	</p>
+	<div>
+		<h2>我是一个块</h2>
+		<h2>我是一个块</h2>
+		<h2>我是一个块</h2>
+		<div>
+			<em>我是一个内联</em><em>我是一个内联</em><em>我是一个内联</em>
+		</div>
+	</div>
+	<p> 
+		&lt;meta&gt;标签:提供本界面的数据(搜索引擎页面可见),当前html的字符集,设置Cookie缓存等<br>
+		详见:<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta">meta mdn</a>
+	</p>
+	<p>
+		&lt;link&gt;标签:连接当前html需要的资源<br>
+		详见:<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/link">link mdn</a>
+	</p>
+	<p>
+		&lt;title&gt;标签:浏览器页面的标题,收藏时的页面说明
+	</p>
+	<p>
+		&lt;h1-h6&gt;标签:块级标签,通常用于页面标题,h后的数字越小则标题字体越大
+		<div>
+		<h3>我是H3</h3>
+		<h4>我是H4</h4>
+		</div>
+	</p>
+	<p>
+		&lt;hr&gt;标签:块级标签,水平线,如下:
+		<hr>
+	</p>
+	<p>
+		&lt;br&gt;标签:块级标签,换行
+	</p>
+	<p>
+		&lt; ol &amp; ul &gt;标签:块级标签,有序与无序的列表,有序的ol一般用于书名之类需依次排序的列表
+		<div>
+			<h5>这是一本书</h5>
+			<ol>
+				<li>第一章</li>
+				<li>第二章</li>
+				<li>第三章</li>
+			</ol>
+		</div>
+		无序的ul则表示下面的列表数据并没有顺序上的联系
+		<div>
+			<h5>这是店里有卖的水果</h5>
+			<ul>
+				<li>苹果</li>
+				<li>香蕉</li>
+				<li>橘子</li>
+			</ul>
+		</div>
+	</p>
+	<p>
+		&lt;figure&gt;标签:块级标签,搭配一张图以及对图片的说明
+		<figure>
+			<figcaption>图片的说明</figcaption>
+			<img style="width: 400px ; height:200px;" src="source/example1.jpg">
+		</figure>
+	</p>
+	<p>
+		&lt;div&gt;标签:块级标签,网页中最常见的标签,用于对网页的布局整理
+		<div style="width: 100%; height: 60px;">
+			<h3>在下div</h3>
+		</div>
+	</p>
+	<p>
+		&lt;span&gt;标签:内联标签,与其他块级标签配合使用,可以一行上的多个字段做不同的效果<br>
+		<span id="span1" style="color:red;">span1	</span>
+		<span id="span2" style="color:green;">span2	</span>
+		<span id="span3" style="color:black">span3</span>
+	</p>
+	<p>
+		&lt;img&gt;标签:内联标签,在行内插入一张图片<br>
+		<img style="width: 400px ; height:200px;" src="source/example2.jpg">
+	</p>
+	<p>
+		&lt;strong\em\i\b&gt;标签:内联标签,strong与em表示逻辑重要,而i,b只是对字体效果的变化,em强调的字段为斜体,strong为粗体,而b,i只是单独对字体加粗和倾斜.强调的层度上,strong>em<br>
+		<div>
+			<em>在下em强调</em><br>
+			<strong>在下strong强调</strong><br>
+			<b>我只是加粗</b><br>
+			<i>我只是倾斜</i>
+		</div>
+	</p>
+	<p>
+		&lt;a&gt;标签:内联标签,超链接,指向一个URL,GET协议<br>
+		<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a">a标签</a>
+	</p>
+	<p>
+		&lt;small &amp; big&gt;标签:内联标签,将字体缩小或放大,但新的规范中不提倡使用,提倡使用CSS来实现字体变化,small和big可以多重嵌套,每嵌套一次就会比上次的字体放大或者缩小一个字号<br>
+		<div>
+			<span>我是一个正常文本</span><br>
+			<small>我是一个缩小文本</small><br>
+			<small><small>我是一个缩小2次的文本</small></small><br>
+			<big>我是一个放大文本</big><br>
+			<big><big>我是一个放大2次的文本</big></big>
+		</div>
+	</p>
+	<p>
+		&lt;table&gt;标签:表格标签,可创建一个表格用来表示需要表示的数据<br>
+		<span>一个表格只能有3个元素:thead,tbody和tfoot.thead的数据使用th来表示,tbody用td表示,head和body都可用tr</span><br>
+		<span>详见:</span><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/table">table mdn</a>
+		<table border="1">
+			<thead>你真的有梦想吗?(斜眼)
+				<tr>
+					<th></th>
+					<th>有</th>
+					<th>没有</th>
+					<th>不确定</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>胖虎</td>
+					<td></td>
+					<td></td>
+					<td>✔</td>
+				</tr>
+				<tr>
+					<td>小夫</td>
+					<td></td>
+					<td>✔</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>大雄</td>
+					<td>✔</td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+			<tfoot>
+				
+			</tfoot>
+		</table>
+	<p>
+		&lt;form&gt;标签:表单标签,提交input或selection或textarea中的数据到服务器.默认的请求为get,如果没有&lt;input type=&quot;submit&quot;&gt;的提交按钮,表单的数据将无法提交.target属性同样适用于form
+		<form action="" method="post">
+			<input type="text" name="name" placeholder="你的名字">
+			<input type="text" name="age" placeholder="你的年龄">
+			<input type="submit" value="提交">
+		</form>
+		&lt;input&gt;标签会根据填写的type成为各种各样的选择框,一般常用的有以下几种<br>
+		1.text:文本输入框<br>
+		<input type="text" placeholder="肉眼可见"><br>
+		2.password:密码输入框<br>
+		<input type="password" placeholder="需要隐藏的文字"><br>
+		3.radio单选框,多个选择只能选一个<br>
+		<form action="" method="post">
+			<label><input type="radio" name="fruit" value="banana" checked="checked">香蕉</label>
+			<label><input type="radio" name="fruit" value="orange">橘子</label>
+			<label><input type="radio" name="fruit" value="watermelon">西瓜</label>
+		</form>
+		4.checkbox多选框,可同时选中多个
+		<form action="" method="post">
+			<label><input type="checkbox" name="fruit" value="banana">香蕉</label>
+			<label><input type="checkbox" name="fruit" value="orange">橘子</label>
+			<label><input type="checkbox" name="fruit" value="watermelon" checked="checked">西瓜</label>
+		</form>
+		&lt;select&gt;标签表现为一个下拉框的样式,可以单选以及多选,多选需要将mulitple启用<br>
+		明天起床最想看见的事:<br>
+		<form>
+			<select name="g1">
+				<option value="1">微信收到3000红包</option>
+				<option value="2">微信通知不用公司放假3天</option>
+				<option value="3" selected="">女朋友给买了新游戏</option>
+			</select>
+		</form>
+		5.textarea文本输入区<br>
+		<form action="" method="post">
+			<textarea>
+			</textarea>
+		</form>
+	</p>
+	<p>
+		&lt;iframe&gt;标签可以嵌套一个其他的页面,宽度可以设置为100%而高度不行,可与a标签联合使用<br>
+		<a target="f1" href="http://www.qq.com">QQ</a>
+		<a target="f1" href="http://www.baidu.com">Baidu</a>
+		<a target="f1" href="https://www.hao123.com/">hao123</a>
+		<iframe name="f1" src="iframe-page.html"></iframe>
+	</p>
+</body>
+</html>
